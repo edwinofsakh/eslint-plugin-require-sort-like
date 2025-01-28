@@ -11,7 +11,6 @@
 const rule = require("../../../lib/rules/sort"),
   RuleTester = require("eslint").RuleTester;
 
-
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -19,13 +18,44 @@ const rule = require("../../../lib/rules/sort"),
 const ruleTester = new RuleTester();
 ruleTester.run("sort", rule, {
   valid: [
-    // give me some code that won't trigger a warning
+    {
+      code: `
+const f = require('@foo');
+const a = require('bar');
+const b = require('foo');
+const c = require('./foo');
+const d = require('../foo');
+const e = require('../../foo');
+`,
+    },
   ],
 
   invalid: [
     {
-      code: "",
-      errors: [{ messageId: "Fill me in.", type: "Me too" }],
+      code: `
+const a = require('bar');
+const b = require('foo');
+const c = require('./foo');
+const d = require('../foo');
+const e = require('../../foo');
+const f = require('@foo');
+`,
+      output: `
+const f = require('@foo');
+const a = require('bar');
+const b = require('foo');
+const c = require('./foo');
+const d = require('../foo');
+const e = require('../../foo');
+`,
+      errors: [
+        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "M2", type: "VariableDeclaration" },
+      ],
     },
   ],
 });
