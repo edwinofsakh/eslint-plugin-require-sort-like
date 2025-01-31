@@ -1,6 +1,6 @@
 # eslint-plugin-require-sort-like
 
-enforce sorted require declarations within modules
+Enforce sorted `require` declarations within modules.
 
 ## Installation
 
@@ -32,7 +32,6 @@ export default [
 ];
 ```
 
-
 Then configure the rules you want to use under the `rules` key.
 
 ```js
@@ -44,26 +43,33 @@ export default [
             require-sort-like
         },
         rules: {
-            "require-sort-like/rule-name": "warn"
+            "require-sort-like/sort": ["error", {
+                "ignoreCase": false,
+                "ignoreDuplicated": false,
+                "ignoreRequireSort": false,
+                "ignorePropertySort": false,
+            }]
         }
     }
 ];
 ```
 
+## Development
 
+You can use [ESLint Code Explorer](https://explorer.eslint.org/) to check AST.
 
 ## Configurations
 
 <!-- begin auto-generated configs list -->
+
 TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
+
 <!-- end auto-generated configs list -->
-
-
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
+
 TODO: Run eslint-doc-generator to generate the rules list.
+
 <!-- end auto-generated rules list -->
-
-
