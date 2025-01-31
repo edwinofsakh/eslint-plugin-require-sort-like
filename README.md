@@ -70,6 +70,10 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 
 <!-- begin auto-generated rules list -->
 
-TODO: Run eslint-doc-generator to generate the rules list.
+🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
+
+| Name                       | Description                                        | 🔧 |
+| :------------------------- | :------------------------------------------------- | :- |
+| [sort](docs/rules/sort.md) | enforce sorted require declarations within modules | 🔧 |
 
 <!-- end auto-generated rules list -->
