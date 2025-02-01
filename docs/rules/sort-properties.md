@@ -4,11 +4,11 @@
 
 <!-- end auto-generated rule header -->
 
-Please describe the origin of the rule here.
+Sort `require` properties alphabetically
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to sort properties in `require` declaration alphabetically.
 
 Examples of **incorrect** code for this rule:
 
@@ -30,8 +30,8 @@ This rule accepts an object with its properties as
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+This rule is a formatting preference and not following it won’t negatively affect the quality of your code. If alphabetizing imports isn’t a part of your coding standards, then you can leave this rule disabled.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+- [sort-imports](https://eslint.org/docs/latest/rules/sort-imports)

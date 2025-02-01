@@ -1,14 +1,14 @@
-# Enforce sorted require declarations within modules (`require-sort-like/sort-declarations`)
+# Enforce sorted `require` declarations within modules (`require-sort-like/sort-declarations`)
 
 🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
 
 <!-- end auto-generated rule header -->
 
-Please describe the origin of the rule here.
+Enforce sorted `require` declarations within modules
 
 ## Rule Details
 
-This rule aims to organize `require` declarations within modules and prevent duplicates.
+This rule aims to organize `require` declarations within modules.
 
 Examples of **incorrect** code for this rule:
 
@@ -38,6 +38,5 @@ This rule is a formatting preference and not following it won’t negatively aff
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
-
-[Require sort](https://marketplace.visualstudio.com/items?itemName=Perkovec.require-sort)
+- [Require sort](https://marketplace.visualstudio.com/items?itemName=Perkovec.require-sort)
+- [sort-imports](https://eslint.org/docs/latest/rules/sort-imports)

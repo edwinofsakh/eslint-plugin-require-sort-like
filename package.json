@@ -2,6 +2,10 @@
   "name": "eslint-plugin-require-sort-like",
   "version": "0.1.0",
   "description": "Enforce sorted require declarations within modules",
+  "homepage": "https://github.com/edwinofsakh/eslint-plugin-require-sort-like#readme",
+  "bugs": {
+    "url": "https://github.com/edwinofsakh/eslint-plugin-require-sort-like/issues"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -38,5 +42,9 @@
   "peerDependencies": {
     "eslint": ">=8.57.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwinofsakh/eslint-plugin-require-sort-like.git"
+  }
 }

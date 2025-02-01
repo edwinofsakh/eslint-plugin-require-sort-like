@@ -45,11 +45,10 @@ export default [
             require-sort-like
         },
         rules: {
-            "require-sort-like/sort": ["error", {
+            "require-sort-like/duplicates": "error",
+            "require-sort-like/sort-declarations": "error",
+            "require-sort-like/sort-properties": ["error", {
                 "ignoreCase": false,
-                "ignoreDuplicated": false,
-                "ignoreRequireSort": false,
-                "ignorePropertySort": false,
             }]
         }
     }
@@ -60,22 +59,16 @@ export default [
 
 You can use [ESLint Code Explorer](https://explorer.eslint.org/) to check AST.
 
-## Configurations
-
-<!-- begin auto-generated configs list -->
-
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-
-<!-- end auto-generated configs list -->
-
 ## Rules
 
 <!-- begin auto-generated rules list -->
 
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| Name                       | Description                                        | 🔧 |
-| :------------------------- | :------------------------------------------------- | :- |
-| [sort](docs/rules/sort.md) | enforce sorted require declarations within modules | 🔧 |
+| Name                                                 | Description                                                    | 🔧 |
+| :--------------------------------------------------- | :------------------------------------------------------------- | :- |
+| [duplicates](docs/rules/duplicates.md)               | Prevent multiple `require` declarations from the same package. |    |
+| [sort-declarations](docs/rules/sort-declarations.md) | Enforce sorted `require` declarations within modules.          | 🔧 |
+| [sort-properties](docs/rules/sort-properties.md)     | Sort `require` properties alphabetically.                      | 🔧 |
 
 <!-- end auto-generated rules list -->

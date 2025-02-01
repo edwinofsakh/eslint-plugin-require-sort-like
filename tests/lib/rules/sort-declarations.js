@@ -1,5 +1,5 @@
 /**
- * @fileoverview enforce sorted require declarations within modules
+ * @fileoverview Enforce sorted `require` declarations within modules.
  * @author Sergey Panpurin
  */
 "use strict";
