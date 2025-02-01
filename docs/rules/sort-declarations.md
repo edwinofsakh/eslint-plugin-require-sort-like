@@ -1,4 +1,4 @@
-# Enforce sorted require declarations within modules (`require-sort-like/sort`)
+# Enforce sorted require declarations within modules (`require-sort-like/sort-declarations`)
 
 🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
 
@@ -31,17 +31,6 @@ const c = require("./foo1");
 const d = require("../foo2");
 const e = require("../../foo3");
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-This rule accepts an object with its properties as
-
-- `ignoreCase` (default: `false`)
-- `ignoreDuplicated` (default: `false`)
-- `ignoreRequireSort` (default: `false`)
-- `ignorePropertySort` (default: `false`)
 
 ## When Not To Use It
 

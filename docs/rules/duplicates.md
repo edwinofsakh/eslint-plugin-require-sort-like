@@ -1,4 +1,6 @@
-# Prevent multiple `require` declarations from the same package. (`duplicates`)
+# Prevent multiple `require` declarations from the same package (`require-sort-like/duplicates`)
+
+<!-- end auto-generated rule header -->
 
 Please describe the origin of the rule here.
 
@@ -9,22 +11,15 @@ This rule aims to...
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+const { a } = require("bar");
+const { b } = require("bar");
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+const { a, b } = require("bar");
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 

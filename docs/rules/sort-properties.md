@@ -1,4 +1,8 @@
-# Sort `require` properties alphabetically. (`sort-properties`)
+# Sort `require` properties alphabetically (`require-sort-like/sort-properties`)
+
+🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
+<!-- end auto-generated rule header -->
 
 Please describe the origin of the rule here.
 
@@ -9,22 +13,20 @@ This rule aims to...
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+const { b, a } = require("bar");
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+const { a, b } = require("bar");
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+This rule accepts an object with its properties as
+
+- `ignoreCase` (default: `false`)
 
 ## When Not To Use It
 
