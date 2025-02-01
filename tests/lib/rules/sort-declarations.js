@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/sort"),
+const rule = require("../../../lib/rules/sort-declarations"),
   RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
@@ -74,32 +74,26 @@ const d = require('../foo2');
 const e = require('../../foo3');
 `,
       errors: [
-        { messageId: "M2", type: "VariableDeclaration" },
-        { messageId: "M2", type: "VariableDeclaration" },
-        { messageId: "M2", type: "VariableDeclaration" },
-        { messageId: "M2", type: "VariableDeclaration" },
-        { messageId: "M2", type: "VariableDeclaration" },
-        { messageId: "M2", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "VariableDeclaration" },
       ],
     },
     {
       code: `
-const a = require('bar');
-const b = require('bar');
+require('bbb');
+const a = require('aaa');
+`,
+      output: `
+const a = require('aaa');
+require('bbb');
 `,
       errors: [
-        { messageId: "M3", type: "VariableDeclaration" },
-        { messageId: "M3", type: "VariableDeclaration" },
-      ],
-    },
-    {
-      code: `
-const { a } = require('bar');
-const { b } = require('bar');
-`,
-      errors: [
-        { messageId: "M3", type: "VariableDeclaration" },
-        { messageId: "M3", type: "VariableDeclaration" },
+        { messageId: "MSG", type: "ExpressionStatement" },
+        { messageId: "MSG", type: "VariableDeclaration" },
       ],
     },
   ],

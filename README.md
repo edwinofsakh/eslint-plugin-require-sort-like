@@ -2,6 +2,15 @@
 
 Enforce sorted `require` declarations within modules.
 
+This plugin was initialized via [`generator-eslint`](https://www.npmjs.com/package/generator-eslint).
+
+
+
+## TO DO
+
+[ ] Split rules.
+[ ] Investigate fix one require issue.
+
 ## Installation
 
 You'll first need to install [ESLint](https://eslint.org/):
