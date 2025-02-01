@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-require-sort-like",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Enforce sorted require declarations within modules",
   "keywords": [
     "eslint",
